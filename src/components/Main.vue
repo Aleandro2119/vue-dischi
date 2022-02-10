@@ -1,13 +1,12 @@
 <template>
   <main>
-    <div>
+    <div class="container">
       <div class="row">
         <div v-for="element in elements" :key="element.title" class="cols">
           <AlbumCard
             :poster="element.poster"
             :title="element.title"
             :author="element.author"
-            :genre="element.genre"
             :year="element.year"
           />
         </div>
@@ -41,6 +40,10 @@ export default {
 </script>
 
 <style land="scss" scoped>
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
 .cols {
   width: calc(100% / 5);
 }
